@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Online Image Resizer - Crop, Resize & Compress Images, Photos and Pictures for FREE</title>
+<meta name="description" content="Crop, resize images in JPEG|PNG|GIF format to the exact pixels or proportion you specified, compress them to reduce the file sizes, making it easy to use them as your desktop wallpaper, Facebook cover photo, Twitter profile photo, avatar icons, etc."> 
+<link href="image/resize.ico" rel="shortcut icon">
+	<link rel="apple-touch-icon" sizes="57x57" href="image/57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="image/60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="image/72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="image/76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="image/114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="image/120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="image/144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="image/152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="image/180.png">
+<link rel="stylesheet" type="text/css" href="css/styleALL.css?ver=12" />
+</head>
+<body>
+	
+<div id="top_parent">
+
+	<div id="top">
+		<div id="logo">
+			<img src="image/logopic1.png" width="48" height="48" border="0" style="cursor: pointer;margin: 0 0px 5px 0;" onclick="newtab();">
+			<img src="image/logotext2.png" width="200" height="60" border="0" style="cursor: pointer;" onclick="newtab();">
+		</div>
+	
+	
+		<div class="version" onclick="newwin('https://compressimage.toolur.com');">
+			Compress JPEG
+		</div>			
+		<div class="version" onclick="newwin('https://pdftojpg.me/');">
+			PDF to JPG
+		</div>		
+		<div class="version" onclick="newwin('https://icoconvert.com/');">
+			ICO Convert
+		</div>			
+		<div class="version" onclick="newwin('https://passwordsgenerator.net/');">
+			Password Generator
+		</div>				
+		<div class="version" onclick="newwin('https://gifmaker.me/');">
+			GIF Maker
+		</div>			
+			
+		
+	</div>		
+</div>
+<!--
+<div id="intro">	
+	<div id="intro_text2">
+		<p>The best free online image resizer and compressor on the Web, crop, resize and optimize your images was never easier.</p>
+		<p>Crop and resize any image to the exact pixels or proportion you specified and reduce the file size significantly without losing quality for FREE, without Photoshop.</p>
+	</div>	
+</div>
+-->
+
+<!--
+<div style="width: 100%;    margin: 0 0px 10px 0px;    float: left;    text-align: center;    padding: 30px 0px 30px 0px;    border: 1px solid #4b99ff;    border-radius: 5px 5px;    background: #ebfaff;">
+
+If you want to make money( USD $350+ per month ) with only a few clicks per month, 
+and your country has a low tax rate or do not tax foreign income( Adsense ), please contact me: 
+</div>
+-->
+
+
+
+<div class="ADParent">
+<div class="GIFAD">
+	
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1760979134645852" crossorigin="anonymous"></script>
+<!-- 970x90-2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-1760979134645852"
+     data-ad-slot="4639006321"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	
+</div>
+</div>
+	
+	
+	
+
+<div id="root_parent">
+		<div id="root">
+			
+		<div class="d1">
+			
+			<div class="LineTitle">
+				1. Upload an image
+			</div>
+	
+			<div class="LineH40PX">
+				Select an image from your device( Max: 100 MB & 100 MP, GIF format: 30 MB & 10 MP ):
+			</div>		
+			
+			<div class="LineBigBtn">
+					<div class="button big" id="browse" href="javascript:;">	Upload an image	</div>
+					<div class="button big" id="simple" onclick="newwin('https://online-image-resizer.com/');">	Simple Mode	</div>
+					
+			</div>	
+			
+			<div class="LineH40PX">
+					<div id="filelist">  You can upload an image in JPEG, PNG, GIF or BMP format.
+						<!--You may also like this site to <a href="#" onclick="newwin('http://Compressimage.toolur.com');return false;">compress images</a>.-->
+						<!-- This free online <a href="#" onclick="newwin('http://compressimage.toolur.com');return false;">image compressor</a> allows to resize and compress multiple JPEG images at a time.--></div>
+			</div>	
+			
+		</div>
+		<div class="d2">
+			
+			<div class="LineTitle">
+				2. Crop your image( optional )
+			</div>
+	
+			<div class="LineH40PX">
+				Click and drag on the preview image to select your desired area, or fill in the text boxes to make a more precise selection.
+			</div>				
+			
+			
+			<div class="LineH40PX">
+				<div class="LabelsW450PX">
+					Selection type: &nbsp;
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="aspect_radio" id="free_ratio" checked=true onclick="OnSelectionType();">Normal</label>
+					
+					<div style="float:right;">
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="aspect_radio" id="fixed_ratio" onclick="OnSelectionType();">Fixed Aspect Ratio</label>
+					<label>  <input type="text" class="coord" size="4" id="w_radio" name="w_radio" value="1366" disabled="disabled" onclick="SelectAll('w_radio')" onkeyup="ChangeRatio();"></label>
+					<label>: <input type="text" class="coord" size="4" id="h_radio" name="h_radio"  value="768"   disabled="disabled" onclick="SelectAll('h_radio')" onkeyup="ChangeRatio();"></label>
+					</div>
+				</div>			
+				<div class="button tiny" id="sel_Ratio" onclick="ChangeRatio();"> Change </div>
+			</div>			
+			
+			
+			
+			<div class="LineH40PX">
+				<div class="LabelsW450PX">
+					Selection area: &nbsp;
+					<label>X: <input type="text" class="coord" size="4" id="x1" name="x1" value="0" onclick="SelectAll('x1');" onkeyup="SelectArea();"></label>
+					<label>Y: <input type="text" class="coord" size="4" id="y1" name="y1" value="0" onclick="SelectAll('y1');" onkeyup="SelectArea();"></label>
+					
+					<div style="float:right;">
+					<label>W: <input type="text" class="coord" size="4" id="w" name="w" value="0" onclick="SelectAll('w');"  onkeyup="SelectArea();"></label>
+					<label>H:  <input type="text" class="coord" size="4" id="h" name="h" value="0"  onclick="SelectAll('h');"  onkeyup="SelectArea();"></label>
+					</div>
+				</div>
+				
+				<div class="button tiny" id="sel_area" onclick="SelectArea();"> Select </div>
+				
+			</div>	
+			
+			
+			
+			<div class="LineH40PX">
+				<div class="LabelsW450PX" id="Text2Crop">
+						Press the "Crop" button to crop your image.
+				</div>
+				<div class="button tiny" id="btn_crop" onclick="Crop_or_undo();"> Crop </div>
+				<div class="button tiny" id="sel_all" onclick="Select_All();"> Select All</div>
+				<div class="button tiny" id="sel_none" onclick="Deselect();"> Deselect </div>
+				
+			</div>				
+					
+			
+			<div id="crop_parent" >				
+					<img id="crop_box">
+			</div>
+			<!--<div id="blank_div" onmousedown="CancelSelect();">
+			</div>-->
+			
+		</div>
+		<div class="d1">
+			<div class="LineTitle">
+				3. Rotate your image( optional )
+			</div>
+	
+			<div class="LineH40PX">
+				<div class="LabelsRadio">
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="rotate_radio" id="no_rotate" checked=true onclick="OnRotate(0);">No Rotation</label>
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="rotate_radio" id="rotate_90CW" onclick="OnRotate(90);">Rotate 90&deg; Clockwise</label>
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="rotate_radio" id="rotate_180" onclick="OnRotate(180);">Rotate 180&deg;</label>
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="rotate_radio" id="rotate_90CCW" onclick="OnRotate(270);">Rotate 90&deg; Counterclockwise</label>
+				</div>								
+			</div>		
+				
+			</div>
+			<div class="d2">
+			
+			<div class="LineTitle">
+				4. Resize your image
+			</div>
+	
+			<div class="LineH40PX">
+				Resize the image by percentage, or resize it to be exactly the size you specified, for example: 1366x768 pixels.
+			</div>				
+							
+	
+			<div class="LineSlider">
+				<div class="labelsSlider" id="SliderResizeParent" >
+					
+				</div>
+			</div>	
+					
+			
+			<div class="LineH40PX">
+				<div class="LabelsW450PX" >
+					<label><input name="sliderValue" class="coord" id="InputResizeParent" type="Text" size="2" onkeyup="A_SLIDERS[0].f_setValue(this.value, true)"> %  </label>
+					<label><input name="InputResizeW" class="coord" id="InputResizeW" type="Text" size="2" value="200" onkeyup="UpdateResizeWH(true);"> x </label>
+					<label><input name="InputResizeH" class="coord" id="InputResizeH" type="Text" size="2" value="200" onkeyup="UpdateResizeWH(false);"> px </label>
+				
+					<label class="radio_label"><input type="checkbox" class="empty_class" checked=true name="FixedAspectRatioCheckBox" id="FixedAspectRatioCheckBox" onclick="UpdateResizeWH(true);">Keep Aspect Ratio</label>
+				</div>	
+			</div>
+			
+			<div class="LineH40PX">
+				Fill in the background with a solid color if the proportion of image changed:
+			</div>			
+			
+			<div class="LineH40PX">
+				<div class="LabelsRadioColor">
+					<label class="radio_label2"><INPUT TYPE="radio" class="radiobtn" name="bg_color_radio" id="auto_fill"  onclick="OnBGColor(0);">Auto Mode</label>
+					<label class="radio_label2"><INPUT TYPE="radio" class="radiobtn" name="bg_color_radio" id="no_fill" checked=true onclick="OnBGColor(1);">No Fill( will cause image distortion )</label>
+					<label class="radio_label2"><INPUT TYPE="radio" class="radiobtn" name="bg_color_radio" id="fill_white" onclick="OnBGColor(2);">White</label>
+					<label class="radio_label2"><INPUT TYPE="radio" class="radiobtn" name="bg_color_radio" id="fill_black" onclick="OnBGColor(3);">Black</label>
+					<label class="radio_label2"><INPUT TYPE="radio" class="radiobtn" name="bg_color_radio" id="fill_transparent" onclick="OnBGColor(4);">Transparent( PNG & GIF )</label>
+					<label class="radio_label2"><INPUT TYPE="radio" class="radiobtn" name="bg_color_radio" id="fill_custom" onclick="OnBGColor(5);">Custom Color</label>
+					<div id="pick_color_div"></div>
+				</div>				
+								
+			</div>				
+			
+			
+		</div>
+		<div class="d1">
+			<div class="LineTitle">
+				5. Make background transparent( optional )
+				<a href="#" onclick="toggle_transparent(this);return false;">[ Show Options ]</a>
+			</div>			
+		
+		<div id="div_transparent_parent">
+			<!--
+			<div class="LineH40PX" id="div_idx1">
+				 Remove background from your image to make it has a transparent background. 
+			</div>
+			
+			<div class="LineH40PX" id="div_idx2">
+				You'll need to save your image as PNG or GIF format to keep the transparency. Replace pixels in the following color:
+			</div>
+			
+			<div class="LineH40PX" id="div_idx3">
+				<div class="LabelsRadio2">
+					<label class="radio_label" id="label_no_replace"><INPUT TYPE="radio" class="radiobtn" name="replace_radio" id="no_replace" checked=true onclick="OnSelReplace(1);">No Replacement</label>
+					<label class="radio_label" id="label_replace_white"><INPUT TYPE="radio" class="radiobtn" name="replace_radio" id="replace_white" onclick="OnSelReplace(2);">White</label>
+					<label class="radio_label" id="label_replace_rgb"><INPUT TYPE="radio" class="radiobtn" name="replace_radio" id="replace_rgb" onclick="OnSelReplace(3);">RGB Color</label>
+					
+					<label>R: <input type="text" class="rgb" size="4" id="R" name="R" value="255" disabled="disabled"></label>
+					<label>G: <input type="text" class="rgb" size="4" id="G" name="G" value="255" disabled="disabled"></label>
+					<label>B: <input type="text" class="rgb" size="4" id="B" name="B" value="255" disabled="disabled"></label>
+					
+					<label class="radio_label" id="label_replace_hex"><INPUT TYPE="radio" class="radiobtn" name="replace_radio" id="replace_hex" onclick="OnSelReplace(4);">HEX Color</label>
+					<label><input type="text" class="hex" size="4" id="HEX" name="HEX" value="FFFFFF" disabled="disabled"></label>
+				</div>								
+			</div>			
+			
+			<div class="LineH40PX" id="div_idx4">
+				 <label>Fuzz: <input type="text" class="coord" size="4" id="fuzz" name="fuzz" value="0" disabled="disabled"> %( Please increase this value to replace more similar colors to full-transparency, e.g. 5%, 15% ).</label>
+			</div>		
+			
+			<div class="LineH40PX" id="div_idx5">
+				 Some colors look like they are pure white, but they are NOT, in this case you should specify a FUZZ value larger than 0%. 
+			</div>		-->
+			
+		</div>			
+		
+		</div>
+		<div class="d1">
+			<div class="LineTitle">
+				6. Select the output image format
+			</div>
+	
+	<!--		<div class="LineH40PX">
+				 Save your image as: 
+			</div>	-->
+			
+			<div class="LineH40PX">
+				<div class="LabelsRadio">
+					<label class="radio_label" id="label_jpg"><INPUT TYPE="radio" class="radiobtn" name="imgformat_radio" id="format_jpg" checked=true onclick="OnSelFormat('jpg');">JPG</label>
+					<label class="radio_label" id="label_png"><INPUT TYPE="radio" class="radiobtn" name="imgformat_radio" id="format_png" onclick="OnSelFormat('png');">PNG</label>
+					<label class="radio_label" id="label_gif"><INPUT TYPE="radio" class="radiobtn" name="imgformat_radio" id="format_gif" onclick="OnSelFormat('gif');">GIF</label>
+					<label class="radio_label" id="label_bmp"><INPUT TYPE="radio" class="radiobtn" name="imgformat_radio" id="format_bmp" onclick="OnSelFormat('bmp');">BMP</label>
+				</div>								
+			</div>			
+			
+		</div>
+		<div class="d2">
+			<div class="LineTitle">
+				7. Optimize your image( optional ):
+			</div>
+			
+			<div class="LineH40PX" id="OptiTips">
+				 Optimization options:
+			</div>				
+			
+			<div class="LineCompressOptions" id="JPG_OPT_OPTIONS1">
+				<div class="LabelsRadio">
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="jpg_opti_radio" id="opt_jpg_no" checked=true onclick="OnJpgOpt(1);">Best image quality</label>
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="jpg_opti_radio" id="opt_jpg_normal" onclick="OnJpgOpt(2);">Normal compression</label>
+					<label class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="jpg_opti_radio" id="opt_jpg_progressive" onclick="OnJpgOpt(3);">Progressive compression</label>								
+				</div>								
+			</div>			
+			
+			
+			<div class="LineCompressOptions" id="JPG_OPT_OPTIONS2">
+				<div class="LabelsW450PX" >
+				<label>Image quality: <input name="sliderValue" class="coord" id="InputJpgQuality" type="Text" size="2" onkeyup="A_SLIDERS[1].f_setValue(this.value)"> %  </label>
+				</div>
+			</div>
+			
+			<div class="LineSlider" id="JPG_OPT_OPTIONS3">
+				<div class="labelsSlider" id="SliderJpgQualityParent" >
+					
+				</div>
+			</div>				
+			
+			
+			
+			<div class="LineCompressOptions" id="PNG_OPT_OPTIONS1">
+				<div class="LabelsRadio">
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="png_opti_radio" id="opt_png_no" checked=true onclick="OnPngOpt(1);">Default compression</label>
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="png_opti_radio" id="opt_png_lossless" onclick="OnPngOpt(2);">Lossless compression</label>
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="png_opti_radio" id="opt_png_lossy" onclick="OnPngOpt(3);">Lossy compression</label>								
+				</div>								
+			</div>	
+			
+			
+			<div class="LineCompressOptions" id="GIF_OPT_OPTIONS1">
+				<div class="LabelsRadio">
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="gif_opti_radio" id="opt_gif_no" checked=true onclick="OnGIFOpt(1);">Default optimization</label>
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="gif_opti_radio" id="opt_gif_level1" onclick="OnGIFOpt(2);">Level 1 optimization</label>
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="gif_opti_radio" id="opt_gif_level2" onclick="OnGIFOpt(3);">Level 2 optimization</label>
+					<label  class="radio_label"><INPUT TYPE="radio" class="radiobtn" name="gif_opti_radio" id="opt_gif_level3" onclick="OnGIFOpt(4);">Level 3 optimization</label>
+				</div>								
+			</div>				
+			
+			<div class="LineCompressOptions" id="GIF_OPT_OPTIONS2">
+				<div class="LabelsW450PX" >
+					<label>Color Reduction: reduce to <input name="sliderValue" class="coord" id="InputGIFQuality" type="Text" size="2" onkeyup="A_SLIDERS[2].f_setValue(this.value)"> colors  </label>
+				</div>
+			</div>
+			
+			<div class="LineSlider" id="GIF_OPT_OPTIONS3">
+				<div class="labelsSlider" id="SliderGIFQualityParent" >
+					
+				</div>
+			</div>					
+			
+		</div>
+		<div class="d1">
+			<div class="LineBigBtn">		
+				
+				<div class="button bigResize" id="doResize" onclick="DoResize();">	Resize Image	</div>
+				<div id="Text2Resize">
+					
+				</div>
+			</div>
+			
+			
+			<div class="LineH80PX">	
+				<div id="output_file_info">
+					Press the "Resize Image" button to crop, resize and optimize your image. 
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	<div class="ADParent">
+		<div class="GIFAD_BTM2">
+			
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1760979134645852" crossorigin="anonymous"></script>
+<!-- 970x250 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:250px"
+     data-ad-client="ca-pub-1760979134645852"
+     data-ad-slot="7217068204"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			
+		</div>
+		</div>		
+		
+		
+		<div class="d1">
+			
+				
+			
+		</div>		
+		
+			
+		</div>
+		
+		
+
+
+
+<div id="btm_text">
+	<h2>What can you do on ResizeImage.net?</h2>
+	
+	<p>
+		1. Crop your images to match the proportion of your screen( e.g. 1920x1080 pixels ) and set them as your desktop wallpaper without distortion.
+	</p>
+	
+	<p>
+		2. Shrink and optimize your animated gifs without losing animation and quality, making it easy to use them as your avatars, icons or signatures on Internet forums.
+	</p>	
+	
+	<p>
+		3. Resize and compress your png images without losing transparency and quality.
+	</p>		
+	
+	<p>
+		4. Reduce the file size of your pictures to decrease the bandwidth usage of your websites and speed up your website load time.
+	</p>
+	
+	<p>
+		5. Convert your images from one format to another, for example, png to jpg, jpg to png, png to gif.
+	</p>	
+	
+	<p>
+		6. Remove background from your images, making it possible to create an icon in PNG or animated GIF format with transparent background using MS Paint. 
+	</p>		
+	
+	<p>
+		7. Optimize your pngs and combine them into a single icon with icoConvert.com.
+	</p>		
+	
+	<p>
+		8, In a word, this is not only an image resizer, it's also an image optimizer / image cropper / image rotator / image compressor / image reducer / image converter that supports JPEG, transparent PNG and animated GIF format, a png maker, and a background remover. 
+	</p>		
+	
+	<h2>Three reasons why ResizeImage.net is better than Photoshop and other standalone image editing software in some situations:</h2>
+	
+	<p>
+		1. ResizeImage.net is absolutely free, lightweight, portable and easy to use, it enables to shrink or enlarge a photo, make it bigger or smaller.
+	</p>	
+	
+	<p>
+		2. You do not need to download or install any software to use ResizeImage.net.
+	</p>	
+	
+	<p>
+		3. You can access it anywhere, anytime, on any computer with any operating system including Windows, Mac OS X, Linux, etc.
+	</p>		
+	
+	<h2>Do you own the images I uploaded? </h2>
+	
+	<p>
+		Definitely not! We do not own your files. All of the images you uploaded and converted will be removed automatically to save the hard drive space of the server.
+	</p>				
+	
+	
+	<h2>You can crop and resize your images to use them as: </h2>
+	
+	<p>Facebook cover photo, Twitter profile photo, PInterest profile picture, LinkedIn profile picture, LinkedIn personal background image, Instagram profile picture, Tumblr profile picture, VK profile picture, iPhone wallpaper, iPad wallpaper,  Windows wallpaper, Mac wallpaper, SamSung Galaxy wallpaper, animated icons on forums, etc.</p>	
+	
+	
+	<h2>You can crop and resize your images to share them on the top most popular image sharing and social networking sites like: </h2>
+	
+	<p>
+		CargoCollective, Naver, TodayHumor.co.kr, Daum.net, Tistory, Instagram, Tumblr, Flickr, 500PX, Photobucket, 4chan, Facebook, Twitter, Pinterest, VK, WordPress.com, Imgbox, etc.
+	</p>
+	
+	
+	<h2>It's recommended to crop and resize your photos before posting to the best dating sites including: </h2>
+	
+	<p>
+		Craigslist, POF( Plenty of fish ), Match, Meetup, OkCupid, Omegle, etc.
+	</p>	
+	
+	
+	<h2>You can download fine art photos from the following popular art sites, set them as your avatars, wallpapers or print these photos on fabric, canvas, glass, wood, T-Shirts:</h2>	
+	<p>
+		Fine Art America, Etsy, SmugMug, Flickr, 500PX, etc.
+	</p>
+	
+	
+	<h2>You can optimize your images before publishing to your blogs and sites, such as:</h2>	
+	<p>
+		1. Blogs created with Joomla, WordPress, Drupal, etc.
+	</p>
+	
+	<p>
+		2. Online shopping sites created with shoppepro, shopify, magento, bigcommerce, squarespace, volusion, etc. By reducing the file size of your photos, you can reduce the webpage load time, improve the conversion rate and make more money fast online.
+	</p>
+	
+	<h2>ResizeImage.net can be used to resize and optimize the images saved with the following software: </h2>
+	
+	<p>
+		1. Photo editing and image editing software: Adobe Photoshop, MS Paint, Paint.NET, Lightroom, PhotoImpact, PaintShop Pro, etc.
+	</p>
+	
+	<p>
+		 2. Illustrator software and vector graphics editor: Adobe Illustrator, Adobe InDesign, CorelDRAW, Inkscape, Sketchbook, Manga Studio comic illustration, etc.
+	</p>	
+	
+	<p>	
+		3. 3D modeling and rendering software: 3ds max, Maya, LightWave 3D, Blender, Cinema 4D, etc.
+	</p>	
+	
+	<p>		 
+		4. CAD software: AutoCAD, SketchUp, SolidWorks, Inventor, etc.
+	</p>		
+	
+	<p>
+		5. Pony creators.
+	</p>
+
+	<p>		 
+		6. Numerical visualization software: Matlab, Octave, etc.
+	</p>
+	
+	<p>
+		7. Video effects software: Adobe After Effects, Adobe Premiere Pro, Sony Vegas Pro, Final Cut Pro X, etc.
+	</p>	
+
+	<p>
+		8. Screenshot capture software: Screenshot Captor, Lightscreen, Snagit, etc.
+	</p>
+	
+	<p>
+		9. Animated GIF maker: GIFMaker.me, GIFCreator.me, etc.
+	</p>
+	
+	<p>
+		10. Video Player: VLC, Potplayer, etc. You can extract the frames from a video with them easily.
+	</p>
+	
+	
+	<h2>To speed up your websites, you can: </h2>
+	
+	<p>
+		1. Host sites on a server with SSD hard drives to improve the disk I/O performance, for example, VPS servers provided by DigitalOcean, or dedicated servers offered by liquidweb.
+	</p>
+	
+	<p>
+		2. Host sites on a dedicated server with Intel Xeon Processor such as dual E5-2620 v3, then enable gzip compression.
+	</p>
+	
+	<p>
+		3. Combine multiple style sheets and javascript files into a single one and minify them.
+	</p>	
+	
+	<p>
+		4. Combine multiple images using an online CSS sprite generator, and optimize the output image with sites like Resizeimage.net.
+	</p>	
+	
+	<p>
+		5. Use programs with high performance, such as Nginx, NoSQL.
+	</p>	
+	
+	<p>
+		6. Use a CDN such as cloudflare, cloudfront to accelerate your sites.
+	</p>	
+	
+	<p>
+		7. Block spammers that access your sites frequently with software firewall like csf or hardware firewall like Juniper.
+	</p>	
+	
+	<p>
+		8. Use a distributed memory caching system such as redis or memcached.
+	</p>	
+	
+	<p>
+	</p>						
+	
+	
+	<h2>ResizeImage.net has been recommended by the following sites: </h2>
+	
+	<p>GIFMaker.me, ICOConvert.com, www.Baixaki.com.br, www.SuperDownloads.com.br, www.UltraDownloads.com.br </p>	
+	
+	<h2>Keywords: </h2>
+	
+	<p>
+		Alternative to TinyPNG, similar to kraken.io, sites like compressor.io, online Photoshop, CSS sprite, facebook profile picture size 2017.
+	</p>	
+	
+	<p>
+		Redimensionar suas imagens online, Redimensionar gif animado
+	</p>
+	
+	<p>
+		사진 크기 조정, 자르기, 사진 크기 조절, 가로, 픽셀, 세로, PNG의 압축을, gif 애니메이션, gif 용량 줄이기, facebook 커버 사진 사이즈, facebook 이미지 사이즈, 페이스 북 사진 사이즈.
+	</p>
+	
+	<p>
+		Transparenz, Kompression, Dateigröße verringern, Bilder komprimieren, komprimiert PNG
+	</p>
+	
+	<p>
+		Réduire la taille des images PNG, compresser images,  compresser des images, transparence des PNG, redimensionner image
+	</p>
+	
+	<p>
+		PNGファイルを圧縮, アルファチャンネル, JPEG ファイルの最適化, より良いツールがあります, CSSスプライト, Webデザイナー, フロントエンド, 画像, facebook 画像 大きさ, Facebookページのカバー、プロフィール.
+	</p>	
+	
+	<p>
+		уменьшить размер фото, как уменьшить размер фото, изменить размер фото, уменьшить вес фото, уменьшить фото онлайн.
+	</p>
+	
+	<p>
+		resim boyutlandırma, online resim boyutlandırma, resim boyutlandırma sitesi, تغییر سایز عکس, تصغير الصور
+	</p>	
+	
+	<p>
+		resize image, image resizer, photo resizer, picture resizer, resize GIF, GIF resizer, crop image, compress image, image compressor, image optimizer, GIF compressor, GIF optimizer, compress GIF, optimize GIF, PNG compressor, PNG optimizer, compress PNG, optimize PNG, JPEG compressor, JPEG optimizer, compress JPEG, optimize JPEG, resize photo, resize picture, resize banner.
+	</p>
+</div>
+
+
+
+<div id="foot">
+	
+	<div id="foot_text">
+	<div class="foot_line">Copyright &copy; 2015 - 2023 &nbsp; <a href="http://ResizeImage.net" title="Image Resizer">ResizeImage.net</a>&nbsp; 
+		
+	<a href="https://passwordsgenerator.net" title="Password Generator">Password Generator</a>&nbsp;
+	<a href="https://resizeimage.net/soft/">Windows Software</a>&nbsp;
+	<a href="https://resizeimage.net/tools/base64-decode">Base64 Decode</a>&nbsp;
+	<a href="https://resizeimage.net/tools/Case-Convert">Case Convert</a>&nbsp;
+	<a href="https://resizeimage.net/tools/character-count">Character Count</a>&nbsp;
+	<a href="https://resizeimage.net/tools/GUID-Generator">GUID Generator</a>&nbsp;
+	<a href="https://resizeimage.net/tools/qr-code-generator">QR Code Generator</a>&nbsp;
+	<a href="https://resizeimage.net/tools/random-number-generator">Random Number Generator</a>&nbsp;
+	
+	<a href="https://resizeimage.net/tools/text-editor">Text Editor</a>&nbsp;
+	<a href="https://resizeimage.net/tools/Word-Count">Word Count</a>&nbsp;
+	<a href="https://resizeimage.net/tools/md5-hash-generator">MD5 Generator</a>&nbsp;
+	<a href="https://resizeimage.net/tools/sha1-hash-generator">SHA1 Generator</a>&nbsp;
+	<a href="https://resizeimage.net/tools/sha256-hash-generator">SHA256 Generator</a>&nbsp;
+	<a href="https://resizeimage.net/tools/sha512-hash-generator">SHA512 Generator</a>&nbsp;	
+	
+		
+	<!--<a href="http://Compressimage.toolur.com" title="Compress Image">Compress Image</a>&nbsp; -->
+	All Rights Reserved. 
+	
+	We do NOT keep your images.
+	</div>
+	
+
+	
+	<div class="foot_line">The best free online image resizer and compressor on the Web, crop, resize and optimize your images was never easier.</div>
+	<div class="foot_line">Crop and resize any image to the exact pixels or proportion you specified and reduce the file size significantly without losing quality for FREE, without Photoshop.</div>	
+	
+	</div>
+	
+	<!--
+	<div id="foot_logo">
+		<img src="image/logo3.png" width="240" height="60" border="0">
+	</div>-->
+	
+</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/upload/plupload.full.min.js?ver=2"></script>
+<script type="text/javascript" src="js/scriptALL.js?ver=3"></script>
+<script type="text/javascript" src="js/slider.js?ver=2"></script>
+<script type="text/javascript" src="js/main_2017.js?ver=25"></script>
+<script type="text/javascript">
+$(function(){
+	$('#pick_color_div').colpick();
+});	
+	InitBtns();
+</script>
+
+<div style="clear:both"></div>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//gifmaker.me/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>

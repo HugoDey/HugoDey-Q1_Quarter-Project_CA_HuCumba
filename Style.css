@@ -1,0 +1,129 @@
+body { /* Adds the main designs of the website*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url("Background/download.jpg"); 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat; 
+}
+
+.Home{ /* Separate the stuff*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url("Background/download.jpg"); 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat; 
+}
+.header { /*Header part */
+    background-color: #2e058c; 
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+}
+
+.logo img { /* Used for the logo*/
+    width: 50px; 
+    margin-right: 10px; 
+    border-radius: 50%; 
+}
+
+.navbar {  
+    background-color: #2e058c; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.nav-button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #2e058c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.nav-button:hover { /*Activates when hovering over button */
+    background-color: #1c0454;
+}
+
+.footer { /*footer */
+    background-color: #2e058c; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contentPage1 { /*Separates the pages */
+    width: 400px;
+    text-align: justify;
+    color: yellow
+}
+
+
+.SecondPage{ /*Separates the pages */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url("OtherBackgrounds/White\ bg.jpg"); 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat; 
+}
+
+.ThirdPage{ /*Separates the pages */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url("OtherBackgrounds/White\ bg.jpg"); 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat; 
+}
+
+.FourthPage{ /*Separates the pages */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url("OtherBackgrounds/White\ bg.jpg"); 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat; 
+}
+
+.FifthPage{ /*Separates the pages */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url("Background/download.jpg"); 
+    background-size: cover; 
+    background-position: top; 
+    background-repeat: no-repeat; 
+}
+
+.contentPage5{ /*Separates the pages */
+    width: 400px;
+    text-align: justify;
+    color: yellow
+}
+
+.contentPage6{ /*Separates the pages */
+    width: 400px;
+    text-align: justify;
+    color: yellow
+}
